@@ -91,6 +91,7 @@ protected:
       const sensor_msgs::CameraInfoConstPtr& l_info_msg,
       const sensor_msgs::CameraInfoConstPtr& r_info_msg)
   {
+    ROS_INFO_STREAM("[VISO2: At Callback]");
     int queue_size;
     bool approximate_sync;
     ros::NodeHandle local_nh("~");
