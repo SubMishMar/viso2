@@ -1,10 +1,9 @@
 <launch>
 
-  <arg name="camera" default="/image"/>
   <param name ="/use_sim_time" value="true"/>
   <!-- Viso2 -->
   <node pkg="viso2_ros" type="stereo_odometer" name="stereo_odometer" output="screen">
-    <param name="base_link_frame_id" value="$(arg camera)"/>
+    <param name="base_link_frame_id" value="/camera_color_left"/>
     <param name="approximate_sync" type="bool" value="true"/>
     <remap from="/stereo/left/image" to="/kitti/camera_color_left/image_raw"/>
     <remap from="/stereo/right/image" to="/kitti/camera_color_right/image_raw"/>
